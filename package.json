@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js < example.md > example.html"
+  },
+  "keywords": [],
+  "author": "fancn21th <fancn21th@aliyun.com> (http://fancn21th.cn/)",
+  "license": "MIT",
+  "dependencies": {
+    "rehype-stringify": "10.0.0",
+    "remark-parse": "11.0.0",
+    "remark-rehype": "11.1.0",
+    "unified": "11.0.4",
+    "unified-stream": "3.0.0"
+  }
+}
