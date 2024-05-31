@@ -14,7 +14,10 @@
     "rehype-stringify": "10.0.0",
     "remark-parse": "11.0.0",
     "remark-rehype": "11.1.0",
+    "retext": "9.0.0",
     "unified": "11.0.4",
-    "unified-stream": "3.0.0"
+    "unified-stream": "3.0.0",
+    "unist-util-visit": "5.0.0",
+    "vfile-reporter": "8.1.1"
   }
 }
