@@ -56,12 +56,14 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 // import remarkMath from "remark-math";
-import { default as myPlugin } from "./myPlugin.js";
+import { default as headingPlugin } from "./headingPlugin.js";
+import { default as textPlugin } from "./textPlugin.js";
 
 const processor = unified()
   .use(remarkParse)
   // .use(remarkMath)
-  .use(myPlugin)
+  .use(textPlugin)
+  .use(headingPlugin)
   .use(remarkRehype)
   .use(rehypeStringify);
 
