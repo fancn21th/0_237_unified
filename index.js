@@ -54,17 +54,16 @@ import { stream } from "unified-stream";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import remarkGfm from "remark-gfm";
 import rehypeStringify from "rehype-stringify";
-// import remarkMath from "remark-math";
-import { default as headingPlugin } from "./headingPlugin.js";
-import { default as textPlugin } from "./textPlugin.js";
+import { default as plugin } from "./plugin.js";
 
 const processor = unified()
-  .use(remarkParse)
-  // .use(remarkMath)
-  .use(textPlugin)
-  .use(headingPlugin)
-  .use(remarkRehype)
-  .use(rehypeStringify);
+  .use(remarkParse) // markdown -> mdast
+  .use(remarkGfm)
+  .use(plugin)
+  // .use(headingPlugin)
+  .use(remarkRehype) // mdast -> hast
+  .use(rehypeStringify); // hast -> html
 
 process.stdin.pipe(stream(processor)).pipe(process.stdout);
